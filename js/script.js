@@ -62,6 +62,7 @@ searchBtn.addEventListener("click", function (e) {
       el: '.products-body__pagination',
       type: 'fraction',
     },
+    
     navigation: {
       nextEl: '.products-body__next',
       prevEl: '.products-body__prev',
@@ -69,12 +70,26 @@ searchBtn.addEventListener("click", function (e) {
   });
   
   var swiper = new Swiper('.brends__body', {
-    slidesPerView: 5,
-    spaceBetween: 30,
+   
+   
     navigation: {
       nextEl: '.brends__next',
       prevEl: '.brends__prev',
     },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+      },
+    }
   });
   const headeBurger = document.querySelector('.header-top__burger');
   const headerMenu = document.querySelector('.header-top__nav');
